@@ -1,21 +1,19 @@
 public class HienThiSoNguyenTo {
     public static void main(String[] args) {
-        int num = 2;
-        int count = 0;
-        System.out.println("100 so nguyen to la");
-        while (count < 100) {
-            boolean isPrime = true;
-            for (int i = 2; i < Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    isPrime = false;
+        int num = 100;
+        System.out.println("so nguyen to nho hon 100");
+
+        for (int i = 3; i < num; i++) {
+            boolean check = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    check = false;
                     break;
                 }
             }
-            if (isPrime) {
-                System.out.print(num + " ");
-                count++;
+            if (check) {
+                System.out.print(i + " ");
             }
-            num++;
         }
     }
 }
